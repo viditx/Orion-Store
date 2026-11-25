@@ -95,24 +95,14 @@ Read the full [2.0.0 release notes](RELEASE_NOTES_2.0.0.md).
   </picture>
 </p>
 
-## <img src="assets/shape-1.svg" height="26" align="top"> Orion Desktop · Windows Native Port
+## <img src="assets/shape-1.svg" height="26" align="top"> Orion Store Windows
 
-Orion Store is now available natively on Windows! Built by **Vidit** with **Compose Multiplatform (Desktop)** and packaged with a standalone **.NET 9 WPF Setup Installer**, Orion Desktop brings the full Material 3 Expressive catalog experience to the PC:
+Orion Store is now available natively on Windows! Built by **Vidit** with **Compose Multiplatform (Desktop)** and packaged with a standalone **.NET 9 WPF Setup Installer**, Orion Store Windows brings the full Material 3 Expressive catalog experience to the PC:
 
-- **Desktop-Optimized Layout**: Pinned category rail, 1:1 atmospheric icon wash gradients, and fluid Emil Kowalski spring micro-physics.
+- **Desktop-Optimized Layout**: Pinned category rail, 1:1 atmospheric icon wash gradients, and fluid spring micro-interactions.
 - **Dynamic Live GitHub Releases**: Real-time resolution via GitHub/GitLab/Codeberg APIs to pull live Windows binaries (`.msi` > `.exe` > `.msix` > `.zip`).
 - **Silent Background Installer**: Inno Setup / NSIS automated installation engine with checksum validation and safe process extraction.
 - **Standalone Setup Pipeline**: Self-contained WPF setup executable (`OrionStore-Setup.exe`) with smooth non-blocking unzipping engine and desktop shortcut generation.
-
-### Running Desktop from Source
-```bash
-# Run Compose Desktop
-./gradlew :desktop:run
-
-# Package Windows binaries & setup installer
-./gradlew :desktop:packageAppImage
-cd installer && powershell -ExecutionPolicy Bypass -File package-installer.ps1
-```
 
 <p align="center">
   <picture>

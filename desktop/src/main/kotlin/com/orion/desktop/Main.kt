@@ -98,7 +98,7 @@ fun main() {
             if (prefs.autoCleanup) DesktopCatalogRepository.clearPendingInstallers()
             exitApplication()
         },
-        title = "Orion Store",
+        title = "Orion Store Windows",
         icon = windowPainter,
         state = rememberWindowState(width = 1280.dp, height = 860.dp)
     ) {

@@ -183,7 +183,7 @@ namespace OrionInstaller
             byte[] buffer = new byte[64 * 1024];
             int lastReportedPercent = -1;
 
-            progress(8, "Extracting Orion Store 2.0...", "Unpacking components");
+            progress(8, "Extracting Orion Store Windows...", "Unpacking components");
 
             foreach (var entry in archive.Entries)
             {
@@ -215,7 +215,7 @@ namespace OrionInstaller
                     if (percent != lastReportedPercent)
                     {
                         lastReportedPercent = percent;
-                        progress(percent, "Extracting Orion Store 2.0...", entry.Name);
+                        progress(percent, "Extracting Orion Store Windows...", entry.Name);
                     }
                 }
             }
@@ -228,23 +228,23 @@ namespace OrionInstaller
             if (createDesktop)
             {
                 CreateShortcut(
-                    shortcutPath: Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), "Orion Store.lnk"),
+                    shortcutPath: Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), "Orion Store Windows.lnk"),
                     targetPath: exeFile,
                     workingDirectory: destination,
-                    description: "Orion Store 2.0 Desktop Client",
+                    description: "Orion Store Windows",
                     iconLocation: $"{exeFile},0"
                 );
             }
 
             if (createStartMenu)
             {
-                string startMenuDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.StartMenu), "Programs", "Orion Store");
+                string startMenuDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.StartMenu), "Programs", "Orion Store Windows");
                 Directory.CreateDirectory(startMenuDir);
                 CreateShortcut(
-                    shortcutPath: Path.Combine(startMenuDir, "Orion Store.lnk"),
+                    shortcutPath: Path.Combine(startMenuDir, "Orion Store Windows.lnk"),
                     targetPath: exeFile,
                     workingDirectory: destination,
-                    description: "Orion Store 2.0 Desktop Client",
+                    description: "Orion Store Windows",
                     iconLocation: $"{exeFile},0"
                 );
             }
