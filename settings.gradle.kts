@@ -8,4 +8,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Orion-RE"
-include(":app")
+include(":desktop")

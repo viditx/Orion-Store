@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>orion_icon.ico</ApplicationIcon>
+    <AssemblyTitle>Orion Store 2.0 Setup</AssemblyTitle>
+    <AssemblyProduct>Orion Store</AssemblyProduct>
+    <AssemblyCompany>RookieEnough</AssemblyCompany>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="payload.zip" />
+    <EmbeddedResource Include="orion_icon.ico" />
+    <Resource Include="orion_icon.png" />
+    <!-- Google Sans (SIL Open Font License), embedded so the setup app never depends on it
+         being installed on the machine. -->
+    <Resource Include="fonts\GoogleSans-Regular.ttf" />
+    <Resource Include="fonts\GoogleSans-Medium.ttf" />
+    <Resource Include="fonts\GoogleSans-SemiBold.ttf" />
+    <Resource Include="fonts\GoogleSans-Bold.ttf" />
+  </ItemGroup>
+
+</Project>

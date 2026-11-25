@@ -43,3 +43,23 @@ storefront_modules.example.json
 *.py
 __pycache__/
 *.txt
+
+# Windows Desktop & Installer build artifacts
+OrionStore-Setup.exe
+OrionInstaller.exe
+Orion-Setup-Build/
+payload.zip
+installer/payload.zip
+installer/bin/
+installer/obj/
+desktop/build/
+desktop/parity-shots/
+bin/
+obj/
+*.exe
+*.msi
+*.zip
+*.7z
+*.pdb
+Launch_Orion_Desktop.bat
+

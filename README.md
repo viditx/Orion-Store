@@ -95,6 +95,32 @@ Read the full [2.0.0 release notes](RELEASE_NOTES_2.0.0.md).
   </picture>
 </p>
 
+## <img src="assets/shape-1.svg" height="26" align="top"> Orion Desktop · Windows Native Port
+
+Orion Store is now available natively on Windows! Built by **Vidit** with **Compose Multiplatform (Desktop)** and packaged with a standalone **.NET 9 WPF Setup Installer**, Orion Desktop brings the full Material 3 Expressive catalog experience to the PC:
+
+- **Desktop-Optimized Layout**: Pinned category rail, 1:1 atmospheric icon wash gradients, and fluid Emil Kowalski spring micro-physics.
+- **Dynamic Live GitHub Releases**: Real-time resolution via GitHub/GitLab/Codeberg APIs to pull live Windows binaries (`.msi` > `.exe` > `.msix` > `.zip`).
+- **Silent Background Installer**: Inno Setup / NSIS automated installation engine with checksum validation and safe process extraction.
+- **Standalone Setup Pipeline**: Self-contained WPF setup executable (`OrionStore-Setup.exe`) with smooth non-blocking unzipping engine and desktop shortcut generation.
+
+### Running Desktop from Source
+```bash
+# Run Compose Desktop
+./gradlew :desktop:run
+
+# Package Windows binaries & setup installer
+./gradlew :desktop:packageAppImage
+cd installer && powershell -ExecutionPolicy Bypass -File package-installer.ps1
+```
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/m3-divider-dark.svg">
+    <img src="assets/m3-divider-light.svg" alt="" width="100%">
+  </picture>
+</p>
+
 ## <img src="assets/shape-2.svg" height="26" align="top"> Overview
 
 Orion Store is an Android-first store client that leans on public sources instead of hiding everything behind a private service layer. The app pulls catalog data from public JSON, resolves releases from GitHub, GitLab, and Codeberg, and keeps the delivery path understandable enough that users can see where things come from and how updates are discovered.
